@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KT Ads | Animated Menus</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    font-family:Arial, sans-serif;
+}
+.wrapper{
+    width:100%;
+    max-width:1080px;
+    position: relative;
+}
+.wrapper img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Transparent clickable overlays */
+.click-area {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    /* background: rgba(255,0,0,0.35); */ /* ← Uncomment this to see the clickable zones */
+}
+
+/* ===== WhatsApp areas ===== */
+.wa1 { top: 1.4%;  left: 57.8%; width: 37.2%; height: 1.7%; }
+.wa2 { top: 95.2%; left: 59.4%; width: 35.2%; height: 2.2%; }
+.wa3 { top: 78.0%; left: 49.9%; width: 32.8%; height: 1.9%; }
+.wa4 { top: 20.8%; left: 10.0%; width: 32.9%; height: 2.0%; }
+
+/* ===== YouTube areas ===== */
+.yt1 { top: 39.6%; left: 6.8%;  width: 26.1%; height: 5.5%; } /* first video */
+.yt2 { top: 39.5%; left: 37.2%; width: 26.0%; height: 5.5%; } /* second video */
+.yt3 { top: 39.6%; left: 67.5%; width: 25.9%; height: 5.4%; } /* third video */
+.yt4 { top: 48.4%; left: 37.4%; width: 25.5%; height: 2.0%; } /* playlist */
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1293070559415530');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1293070559415530&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="wrapper">
+    <img src="landing page.jpg" alt="Landing Page">
+
+    <!-- WhatsApp links (with Contact event) -->
+    <a href="https://wa.link/88z95m" target="_blank" class="click-area wa1"
+       onclick="fbq('track','Contact');"></a>
+    <a href="https://wa.link/88z95m" target="_blank" class="click-area wa2"
+       onclick="fbq('track','Contact');"></a>
+    <a href="https://wa.link/88z95m" target="_blank" class="click-area wa3"
+       onclick="fbq('track','Contact');"></a>
+    <a href="https://wa.link/88z95m" target="_blank" class="click-area wa4"
+       onclick="fbq('track','Contact');"></a>
+
+    <!-- YouTube links -->
+    <a href="https://youtu.be/75Y_V1BA-6s" target="_blank" class="click-area yt1"></a>
+    <a href="https://youtu.be/KuChvqIfZF0" target="_blank" class="click-area yt2"></a>
+    <a href="https://youtu.be/XOrLr33eBb4" target="_blank" class="click-area yt3"></a>
+    <a href="https://www.youtube.com/playlist?list=PL_2eTJuSAgH1UmMDiIHvRyjE9czj9_te-" target="_blank" class="click-area yt4"></a>
+</div>
+</body>
+</html>
